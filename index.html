@@ -17,15 +17,15 @@
       <div class="container header-div">
         <nav class="nav-header">
           <a class="logo" href="./index.html"><span class="header-logo">Web</span>Studio</a>
-          <ul class="menu">
+          <ul class="menu ">
             <li class="menu-item">
-              <a class="menu-list current" href="./index.html">Studio</a>
+              <a class="menu-list current line " href="./index.html">Studio</a>
             </li>
             <li class="menu-item">
-              <a class="menu-list" href="./portfolio.html">Portfolio</a>
+              <a class="menu-list line" href="./portfolio.html">Portfolio</a>
             </li>
             <li class="menu-item">
-              <a class="menu-list" href="#">Contacts</a>
+              <a class="menu-list line" href="./contacts.html">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -45,7 +45,7 @@
       <section class="hero overlay">
         <div class="container">
           <h1 class="title-hero">Effective Solutions for Your Business</h1>
-          <button class="btn-hero" type="button">Order Service</button>
+          <button class="btn-hero" data-modal-open type="button">Order Service</button>
         </div>
       </section>
       <section class="features">
@@ -364,5 +364,14 @@
         </div>
       </div>
     </footer>
+    <div  class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-btn" data-modal-close >
+          <svg class="modal-svg"  width="8" height="8">
+            <use href="./images/sprite.svg#icon-Close-Modal"></use>
+          </svg></button>
+      </div> 
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
-  </html>
+  </html> 
