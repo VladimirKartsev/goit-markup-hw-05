@@ -13,7 +13,7 @@
   --color_white: #ffffff;
   --font_primary: 'Roboto';
   --font_secondary: 'Raleway';
-  --hover-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  --hover-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*------------------------------ ЗКИДАННЯ --------------------- */
 
@@ -127,12 +127,13 @@ margin-right: 40px;
     color: var(--color_navy-blue);
     text-decoration: none;
     list-style: none;
+    transition: color var(--hover-transition);
 }
 
 .menu-list:hover,
 .menu-list:focus {
     color: var(--color_ocean);
-    transition: var(--hover-transition), color var(--hover-transition);
+    
 }
 .current{
     color: var(--color_iris);
@@ -151,6 +152,7 @@ margin-right: 40px;
     color: var(--color_slate);
     text-decoration: none;
     font-style: normal;
+    transition: color var(--hover-transition);
   /* because of default for a href="mail/tel: is italic */
 }
 .address-item:not(:last-child){
@@ -160,7 +162,7 @@ margin-right: 40px;
 .address-link-text:hover,
 .address-link-text:focus {
     color: var(--color_ocean);
-    transition: var(--hover-transition), color var(--hover-transition);
+    
 }
 .menu-item {
     position: relative;
@@ -197,7 +199,7 @@ transition: var(--hover-transition),background-color var(--hover-transition) ;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 100;
     opacity: 1;
-    transition: visibility var(--hover-transition),opacity var(--hover-transition) background-color var(--hover-transition);
+    transition: visibility var(--hover-transition),opacity var(--hover-transition);
 }
 .modal{
     position: absolute;
@@ -224,11 +226,10 @@ transition: var(--hover-transition),background-color var(--hover-transition) ;
     height: 24px;
     border: 1px solid #E7E9FC;
     border-radius: 50%;
+    
     top: 24px;
     right: 24px;
-    fill: #000000;
-    transition: background-color var(--hover-transition);
-    fill: var(--hover-transition);
+    transition: background-color var(--hover-transition),fill var(--hover-transition);
 }
 .modal-btn:hover,
 .modal-btn:focus{
@@ -287,7 +288,8 @@ transition: var(--hover-transition),background-color var(--hover-transition) ;
     font-family: inherit;
     font-size: 16px;
     padding: 16px 32px;
-    transition: var(--hover-transition);
+    transition: background-color var(--hover-transition), box-shadow var(--hover-transition);
+    
 }
 
 .btn-hero:active,
@@ -299,7 +301,7 @@ transition: var(--hover-transition),background-color var(--hover-transition) ;
     0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
     /* color: var(--color_white); */
-    transition: var(--hover-transition) background-color var(--hover-transition) box-shadow var(--hover-transition);
+    
 }
 /* -------------------------------Features section-------------------- */
 .list-text {
@@ -443,10 +445,11 @@ transition: var(--hover-transition),background-color var(--hover-transition) ;
     align-items: center;
     justify-content: center;
     background-color: var(--color_iris);
+    transition: background-color var(--hover-transition);
 }
 .social-team-link:is(:hover, :focus){
     background-color: var(--color_ocean);
-    transition: var(--hover-transition), background-color var(--hover-transition);
+   
 
 }
 
@@ -454,16 +457,6 @@ transition: var(--hover-transition),background-color var(--hover-transition) ;
 .customers{
     padding-top: 130px;
     padding-bottom: 120px;
-}
-.title-customers {
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 1.11;
-    margin-bottom: 72px;
-    text-align: center;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: var(--color_navy-blue);
 }
 
 .social-customers-list {
@@ -486,6 +479,7 @@ transition: var(--hover-transition),background-color var(--hover-transition) ;
     border-radius: 4px;
     border: 1px solid currentColor;
     color: #8E8F99;
+    transition: color var(--hover-transition);
 
 }
 .social-icon{
@@ -493,7 +487,7 @@ transition: var(--hover-transition),background-color var(--hover-transition) ;
 }
 .social-customers-link:is(:hover, :focus) {
     color: var(--color_ocean);
-    transition: color var(--hover-transition);
+    
 }
 /*--------------------------- FOOTER---------------------------------- */
 
@@ -558,11 +552,12 @@ transition: var(--hover-transition),background-color var(--hover-transition) ;
     align-items: center;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color var(--hover-transition);
 }
 .social-link-footer:hover,
 .social-link-footer:focus{
     background-color:#31D0AA;
-    transition: background-color var(--hover-transition);
+    
 
 }
 /*------------------------------ PORTFOLIO---------------------------- */
@@ -598,6 +593,7 @@ transition: var(--hover-transition),background-color var(--hover-transition) ;
     font-family: inherit;
     font-size: 16px;
     padding: 12px 24px;
+    
 }
 
 .filter-button:active,
